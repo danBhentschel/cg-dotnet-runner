@@ -14,7 +14,6 @@ print "CG> message --channel \"exercise results\" \"\"\n";
 print "CG> message --channel \"exercise results\" \"\"\n";
 print "CG> message --channel \"exercise results\" \"\"\n";
 print "CG> message --channel \"====================\" \"\"\n";
-print "CG> message --channel \"====================\" \"\"\n";
 
 foreach my $line (grep $_ !~ /^CG>/, @lines) {
     chomp $line;
