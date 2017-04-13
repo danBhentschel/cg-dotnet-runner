@@ -27,3 +27,6 @@ lxc launch ubuntu-daily:16.04 docker -p default -p docker
 lxc exec docker -- apt install docker.io -y
 lxc exec docker bash
 ```
+
+## desanitize_project.pl
+Called by the `build` script. This removes "sanitization" from a project in the docker image by replacing sanitized files with their original counterparts. See [danBhentschel/cg-linq-for-beginners](https://github.com/danBhentschel/cg-linq-for-beginners) for more details.
