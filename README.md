@@ -5,7 +5,7 @@ This runner executes a C# unit test compiled for .NET Core, and reports on the r
 
  - Highlights compile errors in the source code based on build output
  - Buffers up build and execution output and shoves it to a "RAW OUTPUT" section at the bottom of the results screen
- - Passes through any CG> command lines (not buffered) from the program execution
+ - Passes through any TECHIO> command lines (not buffered) from the program execution
  - Displays "Building ... Done" while the build is running
 
 ## To build

@@ -1,17 +1,17 @@
 #!/bin/bash
 
-echo "CG> redirect-streams --input out null"
+echo "TECHIO> redirect-streams --input out null"
 
 cd /project/target
 
-echo "CG> message --channel \"execution progress\" Building..."
+echo "TECHIO> message --channel \"execution progress\" Building..."
 dotnet test --filter "FullyQualifiedName=$1" --verbosity="quiet" >build.out 2>&1
 result=$?
-echo "CG> message --channel \"execution progress\" Done"
+echo "TECHIO> message --channel \"execution progress\" Done"
 if [ $result -eq 0 ]; then
-    echo "CG> success true"
+    echo "TECHIO> success true"
 else
-    echo "CG> success false"
+    echo "TECHIO> success false"
 fi
 
 /parse_build_out.pl build.out
