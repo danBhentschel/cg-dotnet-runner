@@ -10,11 +10,6 @@ my @lines = <$fh>;
 
 foreach my $line (grep /^TECHIO>/, @lines) { print $line; }
 
-print "TECHIO> message --channel \"exercise results\" \"\"\n";
-print "TECHIO> message --channel \"exercise results\" \"\"\n";
-print "TECHIO> message --channel \"exercise results\" \"\"\n";
-print "TECHIO> message --channel \"====================\" \"\"\n";
-
 foreach my $line (grep $_ !~ /^TECHIO>/, @lines) {
     chomp $line;
     if ($line =~ /^(.*\.cs)\((\d+),(\d+)\): error (CS\d+:.*)$/) {
